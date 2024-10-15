@@ -1,0 +1,180 @@
+main .wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    color: white;
+}
+
+main a {
+    text-decoration: none !important;
+}
+
+main h1 {
+    font-size: 4rem;
+}
+
+/* Aplica a fonte Authentic ao h2 */
+main h2 {
+    font-size: 3rem;
+    margin: 10px 0;
+    font-family: 'Authentic', sans-serif; /* Aplica a fonte Authentic */
+    position: relative;
+    right: 72px;
+}
+
+@media (max-width: 768px) {
+    main h2 {
+        margin: 0 auto;
+        right: 0;
+        text-align: center;
+        position: static; /* Reseta o posicionamento relativo */
+    }
+}
+
+main p {
+    font-size: 2rem;
+    max-width: 500px;
+    position: relative;
+    right: 72px;
+}
+
+@media (max-width: 768px) {
+    main p {
+        margin: 0 auto;
+        right: 0;
+        text-align: center;
+        position: static; /* Reseta o posicionamento relativo */
+    }
+}
+
+main .buttons {
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, .6);
+    margin-top: 100px;
+    padding-top: 100px;
+    justify-content: space-around;
+    align-items: center !important;
+}
+
+/* Ajusta o layout para o conteúdo em telas maiores */
+main .divisor {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative; /* Necessário para posicionamento absoluto da imagem1 */
+}
+
+/* Flexibilidade para a primeira imagem */
+main .image {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Permite empilhar a imagem e o botão verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    max-width: 50%; /* Garante que a primeira imagem ocupe até metade do espaço */
+}
+
+main .image img {
+    max-height: 350px;
+    max-width: 100%; /* Garante que a imagem se ajuste ao espaço disponível */
+}
+
+/* Flexibilidade para a segunda imagem */
+main .image1 {
+    position: absolute; /* Permite que a imagem seja movida livremente */
+    top: 50px; /* Ajuste a posição vertical conforme necessário */
+    right: 150px; /* Ajuste a posição horizontal conforme necessário */
+    transform: translateY(0%); /* Move a imagem um pouco para cima */
+    width: 45%; /* Largura completa da segunda imagem */
+}
+
+main .image1 img {
+    max-height: 500px; /* Aumenta a altura máxima da imagem */
+    max-width: 100%;
+}
+
+/* Define a descrição e posiciona ao lado da primeira imagem */
+main .description {
+    flex: 1;
+    padding-left: 20px; /* Espaçamento à esquerda do texto */
+    max-width: 50%; /* Garante que o texto ocupe até metade do espaço */
+}
+
+/* Estilos para o botão "Chamar no WhatsApp" */
+main .zap {
+    display: inline-block;  /* Para que o botão seja exibido como um bloco inline */
+    margin-top: 20px;  /* Espaçamento superior para afastar do conteúdo acima */
+    color: #ffffff !important;  /* Define a cor do texto como branco */
+    background-color: #25D366;  /* Cor de fundo verde (cor padrão do WhatsApp) */
+    border: 2px solid #25D366;  /* Borda verde ao redor do botão */
+    padding: 10px 20px;  /* Espaçamento interno do botão */
+    border-radius: 8px;  /* Bordas levemente arredondadas */
+    font-weight: bold;  /* Deixa o texto em negrito */
+    text-align: center;  /* Centraliza o texto dentro do botão */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+main .zap:hover {
+    background-color: #1da851; /* Tom mais escuro de verde ao passar o mouse */
+    border-color: #1da851;
+}
+
+/* Posiciona o botão abaixo da primeira imagem */
+main .divisor .zap {
+    align-self: center;  /* Centraliza o botão dentro da div .image */
+    margin-top: 20px;  /* Adiciona espaçamento acima do botão */
+}
+
+/* Estilos para telas menores */
+@media (max-width: 1200px) {
+    main .buttons {
+        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* Mudança para empilhar as imagens e o texto em telas menores */
+    main .divisor {
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens na tela */
+    }
+
+    /* Centraliza a primeira imagem e ajusta a margem */
+    main .image {
+        justify-content: center !important;
+        margin-bottom: 20px;
+        max-width: 80%;
+    }
+
+    /* Centraliza a segunda imagem */
+    main .image1 {
+        position: static; /* Remove o posicionamento absoluto em telas menores */
+        margin-bottom: 20px;
+        width: 80%; /* Ajusta a largura para telas menores */
+    }
+
+    /* Ajusta o texto para ocupar toda a largura disponível em telas menores */
+    main .description {
+        padding-left: 0;
+        max-width: 100%;
+        text-align: center; /* Centraliza o texto em telas menores */
+    }
+
+    /* Centraliza o botão em telas menores */
+    main .divisor .zap {
+        align-self: center; 
+    }
+}
+
+/* Estilos para os botões "Ir para projetos" e "Ir para Page Web Design" */
+main .buttons.custom-buttons .project-button {
+    color: #ffffff !important;
+    bottom: 40px;
+    font-weight: bold;
+    text-align: center;
+    align-items: flex-start;
+    font-size: 15px;
+    position: relative;
+}

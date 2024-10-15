@@ -1,0 +1,25 @@
+ul {
+    font-family: 'Calibri', sans-serif; /* Define a fonte como Calibri */
+    font-size: 18px; /* Define o tamanho da fonte como 18 pixels */
+}
+
+.Subtitulo {
+    text-align: center; /* Centraliza o texto dentro da <ul> */
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-family: 'Calibri', sans-serif; /* Define a fonte como Calibri */
+    font-size: 24px; /* Define o tamanho da fonte como 18 pixels */
+    display: block; /* Certifique-se de que a ul é um bloco */
+
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+
+/*ul {
+    list-style-type: disc;  Tipo de marcador 
+    padding-left: 20px;  Espaçamento interno à esquerda 
+    margin: 10px 0; Espaçamento superior e inferior
+    background-color: #f5f5f5; Cor de fundo para todas as listas 
+    border: 1px solid #ccc;  Borda ao redor da lista 
+    border-radius: 4px;  Bordas arredondadas 
+} 
+
+*/
